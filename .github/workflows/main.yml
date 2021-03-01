@@ -1,0 +1,35 @@
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  kiwi-test-manifest-example:
+    runs-on: ubuntu-latest
+    name: kiwi operator test example (manifest)
+    steps:
+    - name: Checkout code
+        uses: actions/checkout@v2
+    - id: Test
+      uses:  operator-framework/community-operators@v1
+      with:
+        test-type: 'kiwi'
+        stream: 'upstream-community-operators'
+        name: 'aqua'
+        version: '5.3.0'
+        operator-version-dir: op-bundle-manifest
+
+  kiwi-test-bundle-example:
+    runs-on: ubuntu-latest
+    name: kiwi operator test example (bundle)
+    steps:
+    - name: Checkout code
+        uses: actions/checkout@v2
+    - id: Test
+      uses:  operator-framework/community-operators@v1
+      with:
+        test-type: 'kiwi'
+        stream: 'upstream-community-operators'
+        name: 'cert-utils-operator'
+        version: '0.0.1'
+        operator-version-dir: op-bundle-format
