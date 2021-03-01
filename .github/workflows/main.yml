@@ -6,7 +6,7 @@ on:
 jobs:
   kiwi-test-manifest-example:
     runs-on: ubuntu-latest
-    name: kiwi operator test example (manifest)
+    name: kiwi (manifest)
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -21,7 +21,7 @@ jobs:
 
   kiwi-test-bundle-example:
     runs-on: ubuntu-latest
-    name: kiwi operator test example (bundle)
+    name: kiwi (bundle)
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
