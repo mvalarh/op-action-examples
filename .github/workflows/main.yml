@@ -31,5 +31,5 @@ jobs:
           test-type: 'kiwi'
           stream: 'upstream-community-operators'
           name: 'cockroachdb'
-          version: '2.0.9'
+          version: '5.0.4'
           operator-version-dir: op-bundle-format
