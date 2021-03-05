@@ -18,6 +18,8 @@ jobs:
           name: 'aqua'
           version: '5.3.0'
           operator-version-path: my/op/manifest
+          package-path: my/op/aqua-operator.package.yaml
+          ci-path: my/op/ci.yaml
 
   kiwi-test-bundle-example:
     runs-on: ubuntu-latest
